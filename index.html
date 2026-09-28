@@ -934,13 +934,6 @@ function loadLevel(n) {
 
 // 까딱까딱 움직임
 function nod(el) {
-  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (still) {
-    el.animate([{ outline: "3px dashed #f7c948", outlineOffset: "4px" },
-                { outline: "3px dashed #f7c948", outlineOffset: "4px" }],
-               { duration: 1000, iterations: Infinity });
-    return;
-  }
   el.animate(
     [{ transform: "rotate(-12deg)", transformOrigin: "bottom center" },
      { transform: "rotate(12deg)",  transformOrigin: "bottom center" }],
